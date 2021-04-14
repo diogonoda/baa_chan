@@ -1,0 +1,107 @@
+                                                                 NOTA DE CORRETAGEM
+
+                                                                                                        Nr. Nota            Folha           Data pregão
+                                                                                                        12345               1/1             01/04/2021
+                                             Singulare - corretora de titulos de valores mobiliarios
+                                             Av. Brig. Faria Lima, 1.355 - 3º andar - Pinheiros São Paulo - SP 01452-002
+                                             Tel.: 55 11 3299-2000
+                                             CNPJ 62.285.390/0001-40                        Número da Corretora: 58-2
+
+                                             www.socopa.com.br                              e-mail: socopa@socopa.com.br
+                                             Tel. Ouvidoria: 0800 773 2009                  e-mail Ouvidoria: ouvidoria@bancopaulista.com.br
+Cliente                                                                                                                  CPF/CNPJ/CVM/COB
+12345-6                 JOHN DOE                                                                                         123.456.789-10
+                        BAKER STREET, 221B - WESTMINSTER                                                                 Código cliente             Assessor
+                        LONDON - UK NW1 6XE                                                                              12-3 12345-6               123
+
+Agente de Compensação                   Cliente                                 Valor                                   Custodiante                    C.I.
+                                                                                0,00                            C       0                              N
+Banco   Agência   Conta Corrente        Acionista                               Administrador                           Complemento Nome               P. Vinc.
+123     12345     12345                                                         0                                                                      N
+
+
+Negócios Realizados
+Q Negociação            C/V Tipo Mercado     Prazo      Especificação Título                Obs(*)     Quantidade     Preço/Ajuste   Valor Operação/Ajuste D/C
+
+   BM&FBOVESPA S/A.      V   OPCAO DE        04/20      PETRD192              PN 19,20                         800        0,280000                  224,00   C
+
+                             COMPRA                                           PETR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Resumo dos Negócios                                                             Resumo Financeiro                                                          D/C
+
+                                                                                CBLC
+Vendas à Vista                                                            0,00  Valor Líquido das Operações                                       224,00    C
+Compras à Vista                                                           0,00  Taxa de Liquidação                                                   0,06   D
+Opções - Compras                                                          0,00  Taxa de Registro                                                     0,15   D
+Opções - Vendas                                                        224,00   Total CBLC                                                       223,79     C
+
+Compras à Futuro                                                          0,00  Bovespa/Soma
+Vendas à Futuro                                                           0,00  Taxa de Opções/Futuro                                                0,00   D
+Ajuste do dia                                                             0,00  Taxa A.N.A.                                                          0,00   D
+Ajuste da Posição                                                         0,00  Emolumentos                                                          0,08   D
+Valor das Operações                                                    224,00   Total Bovespa/Soma                                                  0,08    D
+
+Especificações Diversas                                                         Corretagem/Despesas
+                                                                                Corretagem                                                           7,00   D
+                                                                                ISS (SAO PAULO)                                                      0,35
+A coluna "Q" indica liquidação no Agente Qualificado                            I.R.R.F. s/ operações, base R$ 224,00                                0,01
+                                                                                Outras                                                               0,00   C
+
+                                                                                Total Corretagem/Despesas                                           7,00    D
+(*) Observações                                 A - Posição Futuro              Líquido para 02/04/2021                                          216,71     C
+2 - Corretora ou pessoa vinculada atuou na      C - Clubes e Fundos de Ações    Observação: (1) As operações a termo não são computadas no líquido da fatura
+
+contraparte
+# - Negócio direto                              P - Carteira própria
+8 - Liquidação Institucional                    H - Home Broker
+D - Day Trade                                   X - Box
+F - Financiamento                               Y - Desmanche de Box
+B - Debêntures                                  L - Precatório
+T - Liquidação pelo Bruto                       I - POP 
