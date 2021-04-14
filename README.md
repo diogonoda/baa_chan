@@ -45,7 +45,6 @@ end
 * Include more brokerages layouts (Genial, Clear, Easynvest)
 * Improve rspec coverage
 * Code Climate and coverage badges
-* Define layouts from config files
 * Allow users to overwrite layouts
 * Trade Confirmations with multiple pages
 * Trade Confirmations with multiple trades
@@ -58,4 +57,4 @@ more detail.
 
 ## Maintainers
 
-* Diogo Noda <mailto:diogotnoda@gmail.com>
+* Diogo Noda

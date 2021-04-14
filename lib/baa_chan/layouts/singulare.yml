@@ -1,0 +1,36 @@
+broker:
+  line: 4
+trade_confirmation_number:
+  line: 3
+  index: 0
+trade_date:
+  line: 3
+  index: 2
+trades:
+  line: 25
+operation:
+  index: 2
+ticker:
+  index: 6
+quantity:
+  index: 9
+price:
+  index: 10
+clearing_fee:
+  line: 80
+  index: 7
+registration_fee:
+  line: 81
+  index: 7
+emoluments:
+  line: 87
+  index: 5
+brokerage:
+  line: 91
+  index: 1
+iss:
+  line: 92
+  index: 3
+irrf:
+  line: 93
+  index: 14

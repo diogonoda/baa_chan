@@ -4,13 +4,13 @@ module BaaChan
   class Costs
     attr_accessor :clearing_fee, :registration_fee, :emoluments, :brokerage, :iss, :irrf
 
-    def initialize(clearing_fee, registration_fee, emoluments, brokerage, iss, irrf)
+    def initialize(brokerage, clearing_fee, registration_fee, emoluments, options)
+      @brokerage = brokerage
       @clearing_fee = clearing_fee
       @registration_fee = registration_fee
       @emoluments = emoluments
-      @brokerage = brokerage
-      @iss = iss
-      @irrf = irrf
+      @iss = options[:iss] || 0.0
+      @irrf = options[:irrf] || 0.0
     end
   end
 end

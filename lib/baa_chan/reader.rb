@@ -6,7 +6,7 @@ module BaaChan
   class Reader
     BROKER_LIST = {
       singulare: 'Singulare - corretora de titulos de valores mobiliarios'
-    }
+    }.freeze
 
     def initialize(source)
       @source = source
@@ -25,8 +25,10 @@ module BaaChan
 
       case lines[4]
       when BROKER_LIST[:singulare]
-        Parser::Singulare.new(lines).parse
+        layout = Layout.new('singulare')
       end
+
+      Parser.new(lines, layout).call
     end
 
     def sanitize(content)
@@ -35,4 +37,5 @@ module BaaChan
   end
 end
 
-require 'baa_chan/parser/singulare'
+require 'baa_chan/parser'
+require 'baa_chan/layout'
