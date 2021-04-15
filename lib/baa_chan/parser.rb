@@ -76,7 +76,7 @@ module BaaChan
     end
 
     def parse
-      Costs.new(brokerage, clearing_fee, registration_fee, emoluments, { iss: iss, irrf: irrf })
+      Costs.new(brokerage, clearing_fee, registration_fee, emoluments, { iss: iss, irrf: irrf, pis_cofins: pis_cofins })
     end
 
     private
@@ -103,6 +103,14 @@ module BaaChan
 
     def irrf
       @irrf ||= @lines[@layout.line].split[@layout.index].gsub(',', '.').to_f
+    rescue NoMethodError
+      0.0
+    end
+
+    def pis_cofins
+      @pis_cofins ||= @lines[@layout.line].split[@layout.index].gsub(',', '.').to_f
+    rescue NoMethodError
+      0.0
     end
   end
 end

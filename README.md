@@ -42,7 +42,7 @@ end
 
 # TODO
 
-* Include more brokerages layouts (Genial, Clear, Easynvest)
+* Include more brokerages layouts (Clear, Easynvest, XP, ...)
 * Improve rspec coverage
 * Code Climate and coverage badges
 * Allow users to overwrite layouts

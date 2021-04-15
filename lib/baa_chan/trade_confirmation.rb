@@ -13,10 +13,11 @@ module BaaChan
     end
 
     def total_cost
-      @costs.clearing_fee +
+      @costs.brokerage +
         @costs.registration_fee +
         @costs.emoluments +
-        @costs.brokerage
+        @costs.pis_cofins +
+        @costs.clearing_fee
     end
   end
 end
