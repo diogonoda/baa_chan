@@ -7,7 +7,7 @@ trade_date:
   line: 2
   index: 2
 trades:
-  line: 29
+  prefix: 1-BOVESPA
 operation:
   index: 1
 ticker:

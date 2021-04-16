@@ -32,7 +32,7 @@ module BaaChan
     end
 
     def trades
-      @trades ||= [TradeParser.new(@lines[@layout.line], @layout).parse]
+      @trades ||= TradeParser.new(@lines, @layout).parse
     end
 
     def costs
@@ -41,31 +41,36 @@ module BaaChan
   end
 
   class TradeParser
-    def initialize(line, layout)
-      @line = line
+    def initialize(lines, layout)
+      @lines = lines
       @layout = layout
     end
 
     def parse
-      Trade.new(operation, ticker, quantity, price)
+      @lines.each_with_object([]) do |line, trades|
+        next unless line.include? @layout.trade_prefix
+
+        @trade_line = line
+        trades << Trade.new(operation, ticker, quantity, price)
+      end
     end
 
     private
 
     def operation
-      @operation ||= @line.split[@layout.index] == 'V' ? 'Sell' : 'Buy'
+      @trade_line.split[@layout.index] == 'V' ? 'Sell' : 'Buy'
     end
 
     def ticker
-      @ticker ||= @line.split[@layout.index]
+      @trade_line.split[@layout.index]
     end
 
     def quantity
-      @quantity ||= @line.split[@layout.index].to_i
+      @trade_line.split[@layout.index].to_i
     end
 
     def price
-      @price ||= @line.split[@layout.index].gsub(',', '.').to_f
+      @trade_line.split[@layout.index].gsub(',', '.').to_f
     end
   end
 

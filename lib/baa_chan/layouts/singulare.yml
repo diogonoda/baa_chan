@@ -7,7 +7,7 @@ trade_date:
   line: 3
   index: 2
 trades:
-  line: 25
+  prefix: BM&FBOVESPA S/A.
 operation:
   index: 2
 ticker:

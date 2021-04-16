@@ -15,7 +15,7 @@ RSpec.describe BaaChan::Reader do
     end
 
     it 'returns a TradeConfirmations list' do
-      expect(@trade_confirmations.size).to eq(1)
+      expect(@trade_confirmations.size).to eq 1
 
       first_page = @trade_confirmations.first
 

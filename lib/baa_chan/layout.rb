@@ -18,4 +18,8 @@ class Layout
   def index
     attributes[caller_locations.first.label]['index'].to_i
   end
+
+  def trade_prefix
+    attributes['trades']['prefix']
+  end
 end

@@ -47,7 +47,6 @@ end
 * Code Climate and coverage badges
 * Allow users to overwrite layouts
 * Trade Confirmations with multiple pages
-* Trade Confirmations with multiple trades
 * Allow calculating or spreading costs between trades
 
 ## Licensing
