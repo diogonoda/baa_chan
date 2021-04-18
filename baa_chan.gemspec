@@ -3,6 +3,7 @@
 Gem::Specification.new do |s|
   s.name        = 'baa_chan'
   s.version     = '0.0.0'
+  s.executables << 'baa_chan'
   s.summary     = 'Trade Confirmation Reader'
   s.description = <<~DESC
     BaaChan will read your trade confirmations and provide you
@@ -19,5 +20,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'pry', '~> 0.14.1'
   s.add_development_dependency 'rspec', '~> 3.10.0'
 
+  s.add_dependency 'jbuilder', '~> 2.11.2'
   s.add_dependency 'pdf-reader', '~> 2.4.2'
 end

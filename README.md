@@ -16,7 +16,7 @@ about each page of your trades becomes available for you as a
 `BaaChan::TradeConfirmation` object
 
 ~~~ruby
-pages = BaaChan::Reader.new('your_trade_confirmation_path.pdf').call
+pages = BaaChan::Reader.new('your_trade_confirmation_path').call
 
 pages.each do |page|
   puts page.broker
@@ -38,6 +38,15 @@ pages.each do |page|
     puts cost.registration_fee
   end
 end
+~~~
+
+
+You can also run it from your terminal and get a json version of your
+trade confirmation. In this case you could use [jq](https://stedolan.github.io/jq/)
+or some related tool to have a prettier and readable output
+
+~~~shell
+baa_chan <your_trade_confirmation_path> | jq
 ~~~
 
 # TODO
