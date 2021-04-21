@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
-require 'pdf-reader'
-
 module BaaChan
+  class MalformedPDFError < StandardError; end
+
+  class UnknownLayoutError < StandardError; end
+
   class Reader
     BROKER_LIST = {
       singulare: 'Singulare - corretora de titulos de valores mobiliarios',
@@ -14,9 +16,7 @@ module BaaChan
     end
 
     def call
-      PDF::Reader.new(@source).pages.map do |page|
-        parse(page.text)
-      end
+      parse(PdfToText.call(@source))
     end
 
     private
@@ -24,11 +24,13 @@ module BaaChan
     def parse(text)
       lines = sanitize(text)
 
-      layout = if lines[4] == BROKER_LIST[:singulare]
+      layout = if lines[3] == BROKER_LIST[:singulare]
                  Layout.new('singulare')
-               elsif lines[5] == BROKER_LIST[:genial]
+               elsif lines[4] == BROKER_LIST[:genial]
                  Layout.new('genial')
                end
+
+      raise UnknownLayoutError if layout.nil?
 
       Parser.new(lines, layout).call
     end
@@ -39,5 +41,6 @@ module BaaChan
   end
 end
 
+require 'baa_chan/pdf_to_text'
 require 'baa_chan/parser'
 require 'baa_chan/layout'

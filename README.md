@@ -9,6 +9,13 @@ reading the details of your trade confirmations.
 gem install baa_chan
 ~~~
 
+BaaChan depends on `pdftotext` lib. If you're a Linux user probably you won't worry about it.
+You can check availability with:
+~~~shell
+pdftotext -v
+~~~
+Otherwise, https://poppler.freedesktop.org/
+
 ## Usage
 
 BaaChan expects your trade confirmation input as a PDF file. Details
@@ -16,26 +23,27 @@ about each page of your trades becomes available for you as a
 `BaaChan::TradeConfirmation` object
 
 ~~~ruby
-pages = BaaChan::Reader.new('your_trade_confirmation_path').call
+trade_confirmation = BaaChan::Reader.new('your_trade_confirmation_path').call
 
-pages.each do |page|
-  puts page.broker
-  puts page.trade_date
+trade_confirmation.tap do |tc|
+  puts tc.broker
+  puts tc.trade_date
 
-  page.trades.each do |trade|
+  tc.trades.each do |trade|
     puts trade.operation
     puts trade.ticker
     puts trade.quantity
     puts trade.price
   end
 
-  page.costs.each do |cost|
+  tc.costs.tap do |cost|
     puts cost.brokerage
     puts cost.clearing_fee
+    puts cost.registration_fee
     puts cost.emoluments
     puts cost.irrf
     puts cost.iss
-    puts cost.registration_fee
+    puts cost.pis_cofins
   end
 end
 ~~~

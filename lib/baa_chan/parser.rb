@@ -7,6 +7,8 @@ require 'date'
 require 'yaml'
 
 module BaaChan
+  class CostsParserError < StandardError; end
+
   class Parser
     def initialize(lines, layout)
       @lines = lines
@@ -82,38 +84,54 @@ module BaaChan
 
     def parse
       Costs.new(brokerage, clearing_fee, registration_fee, emoluments, { iss: iss, irrf: irrf, pis_cofins: pis_cofins })
+    rescue StandardError => e
+      raise CostsParserError, e.message
     end
 
     private
 
     def brokerage
-      @brokerage ||= @lines[@layout.line].split[@layout.index].gsub(',', '.').to_f
+      brokerage_line = @lines.find { |line| line.match? @layout.brokerage_regexp }
+
+      brokerage_line.split[@layout.index].gsub(',', '.').to_f
     end
 
     def clearing_fee
-      @clearing_fee ||= @lines[@layout.line].split[@layout.index].gsub(',', '.').to_f
+      clearing_fee_line = @lines.find { |line| line.match? @layout.clearing_fee_regexp }
+
+      clearing_fee_line.split[@layout.index].gsub(',', '.').to_f
     end
 
     def registration_fee
-      @registration_fee ||= @lines[@layout.line].split[@layout.index].gsub(',', '.').to_f
+      registration_fee_line = @lines.find { |line| line.match? @layout.registration_fee_regexp }
+
+      registration_fee_line.split[@layout.index].gsub(',', '.').to_f
     end
 
     def emoluments
-      @emoluments ||= @lines[@layout.line].split[@layout.index].gsub(',', '.').to_f
+      emoluments_line = @lines.find { |line| line.match? @layout.emoluments_regexp }
+
+      emoluments_line.split[@layout.index].gsub(',', '.').to_f
     end
 
     def iss
-      @iss ||= @lines[@layout.line].split[@layout.index].gsub(',', '.').to_f
+      iss_line = @lines.find { |line| line.match? @layout.iss_regexp }
+
+      iss_line.split[@layout.index].gsub(',', '.').to_f
     end
 
     def irrf
-      @irrf ||= @lines[@layout.line].split[@layout.index].gsub(',', '.').to_f
+      irrf_line = @lines.find { |line| line.match? @layout.irrf_regexp }
+
+      irrf_line.split[@layout.index].gsub(',', '.').to_f
     rescue NoMethodError
       0.0
     end
 
     def pis_cofins
-      @pis_cofins ||= @lines[@layout.line].split[@layout.index].gsub(',', '.').to_f
+      pis_cofins_line = @lines.find { |line| line.match? @layout.pis_cofins_regexp }
+
+      pis_cofins_line.split[@layout.index].gsub(',', '.').to_f
     rescue NoMethodError
       0.0
     end

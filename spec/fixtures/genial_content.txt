@@ -1,108 +1,57 @@
-                                              NOTA DE CORRETAGEM
-                                                                                                                                  Nr.Nota     Folha     Data pregão
-                                                                                                                                       12     1            27/03/2021
+                                                                            NOTA DE CORRETAGEM
+                                                                                                                                                                                             Nr.Nota          Folha        Data pregão
+                                                                                                                                                                                                     123       1               01/01/2021
 
-
-                                              GENIAL INVESTIMENTOS CORRETORA DE VALORES MOBILIÁRIOS S.A.
-                                              PR BOTAFOGO, 228 - SALA 913BOTAFOGO                                       22250-040 RIO DE JANEIRO - RJ
-
-                                              Tel. (55 21) 2169-9999
-                                              Internet : www.genialinvestimentos.com.br               e-mail :atendimento@genialinvestimentos.com.br
-
-                                              C.N.P.J.: 27.652.684/0001-62                            Carta Patente:
-                                              Ouvidoria : Tel. (55 800) 605-8888                      e-mail ouvidoria: ouvidoria@genialinvestimentos.com.br
-
-Cliente                                                                                                                           C.P.F./C.N.P.J./C.V.M./C.O.B.
-
-  12345-6                 JOHN DOE                                                                                                         123.456.789-10
-                          BAKER STREET, 221B - WESTMINSTER                                                          Código cliente             Assessor
-
-                          NW1 6XE   LONDON - UK                                 (012) 34567-8910                                       123-3      12345-6      1234
-Agente de Compensação                                               Cliente                  Valor                                Custodiante                      C.I.
-
-                                                                                                                         0,00 D         -                           N
-Banco     Agência                         Conta corrente            Acionista                Administrador                        Complemento nome                 P. Vinc
-
-   123              12345                         12345                                                                                                             N
+                                                                            GENIAL INVESTIMENTOS CORRETORA DE VALORES MOBILIÁRIOS S.A.
+                                                                            PR BOTAFOGO, 228 - SALA 913BOTAFOGO                         22250-040 RIO DE JANEIRO - RJ
+                                                                            Tel. (55 21) 2169-9999
+                                                                            Internet : www.genialinvestimentos.com.br e-mail : atendimento@genialinvestimentos.com.br
+                                                                            C.N.P.J.: 27.652.684/0001-62              Carta Patente:
+                                                                            Ouvidoria : Tel. (55 800) 605-8888        e-mail ouvidoria: ouvidoria@genialinvestimentos.com.br
+Cliente                                                                                                                                                                                      C.P.F./C.N.P.J./C.V.M./C.O.B.
+ 12345-6                                  JOHN DOE                                                                                                                                                         123.456.789-10
+                                          BAKER STREET, 221B - WESTMINSTER                                                                                                                Código cliente                      Assessor
+                                          LONDON - UK NW1 6XE                 (012) 34567-8910                                                                                                      123-4        12345-6          1234
+Agente de Compensação                                                                                         Cliente                         Valor                                          Custodiante                                  C.I.
+                                                                                                                                                                                 0,00 D                -                                    N
+Banco            Agência                                          Conta corrente                             Acionista                        Administrador                                  Complemento nome                             P. Vinc
+    123                            123                                             123456                                                                                                                                                   N
 Negócios realizados
- Q Negociação    C/V Tipo mercado             Prazo  Especificação do título                    Obs. (*)Quantidade          Preço / Ajuste    Valor Operação / AjusteD/C
-
-    1-BOVESPA    C   VISTA                           PETROBRAS PN    N2                                 200                 13,30             2.660,00               D
-
+Q Negociação                C/V Tipo mercado                                Prazo     Especificação do título                                    Obs. (*)     Quantidade             Preço / Ajuste           Valor Operação / Ajuste        D/C
+    1-BOVESPA               C    VISTA                                                PETROBRAS PN             N2                                             200                    13,30                    2.660,00                       D
 
 
 
 
+Resumo dos Negócios                                                                                                                 Resumo Financeiro                                                                                       D/C
+Debêntures                                                                                                                0,00      Clearing
+Vendas à vista                                                                                                            0,00      Valor líquido das operações                                                              2.660,00        D
+Compras à vista                                                                                                       2.660,00      Taxa de liquidação                                                                           0,73        D
+Opções - Compras                                                                                                          0,00      Taxa de Registro                                                                             0,00        D
+Opções - Vendas                                                                                                           0,00      Total CBLC                                                                               2.660,73        D
+Operações à termo                                                                                                         0,00      Bolsa
+Valor das oper. c/ títulos públ. (v. nom.)                                                                                0,00      Taxa de termo/opções                                                                           0,00      D
+Valor das operações                                                                                                   2.660,00      Taxa A.N.A.                                                                                    0,00      D
+                                                                                                                                    Emolumentos                                                                                    0,18      D
+                                                                                                                                    Total Bovespa / Soma                                                                           0,18      D
+Especificações diversas                                                                                                             Corretagem / Despesas
 
+A coluna Q indica liquidação no Agente do Qualificado.                                                                                                                                                                             5,00 D
+                                                                                                                                    Clearing
+                                                                                                                                    Execução                                                                                       0,00 D
+                                                                                                                                    Execução casa                                                                                  0,00 D
+                                                                                                                                    ISS ( SÃO PAULO )                                                                              0,25
 
+                                                                                                                                    ISS/PIS/COFINS                                                                               0,48 D
+                                                                                                                                    Total corretagem / Despesas                                                                  5,48
+(*) - Observações:                                         A - Posição Futuro                 T - Liquidação pelo Bruto             Líquido para 31/03/2020                                                                  2.666,39 D
+2 - Corretora ou pessoa vinculada atuou na contra parte.   C - Clubes e Fundos de Ações       I - POP                               Observação: (1) As operações a termo não são computadas no líquido da fatura
+# - Negócio direto                                         P - Carteira Própria               S - Produto fora do perfil de risco
 
+8 - Liquidação Institucional.                              H - Home Broker
 
+D - Day-Trade                                              X - Box
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Resumo dos Negócios                                                                  Resumo Financeiro                                                              D/C
-
-Debêntures                                                                    0,00   Clearing
-Vendas à vista                                                                0,00   Valor líquido das operações                                          2.660,00 D
-
-Compras à vista                                                          2.660,00    Taxa de liquidação                                                       0,73 D
-Opções - Compras                                                              0,00   Taxa de Registro                                                         0,00 D
-
-Opções - Vendas                                                               0,00   Total CBLC                                                           2.660,73 D
-                                                                              0,00
-Operações à termo                                                                    Bolsa
-Valor das oper. c/ títulos públ. (v. nom.)                                    0,00   Taxa de termo/opções                                                     0,00 D
-Valor das operações                                                                  Taxa A.N.A.
-                                                                         2.660,00                                                                             0,00 D
-                                                                                     Emolumentos                                                              0,18 D
-                                                                                     Total Bovespa / Soma                                                     0,18 D
-
-Especificações diversas                                                              Corretagem / Despesas
-
-A coluna Q indica liquidação no Agente do Qualificado.
-                                                                                     Clearing                                                                 5,00 D
-                                                                                     Execução                                                                 0,00 D
-
-                                                                                     Execução casa                                                            0,00 D
-                                                                                     ISS   ( SÃO PAULO )                                                      0,25
-
-
-                                                                                     ISS/PIS/COFINS                                                           0,48 D
-
-                                                                                     Total corretagem / Despesas                                              5,48
-(*) - Observações:                   A - Posição Futuro    T - Liquidação pelo Bruto Líquido para  31/03/2020                                             2.666,39 D
-
- 2 - Corretora ou pessoa vinculada atC - Clubes e Fundos deI - POP                   Observação: (1) As operações a termo não são computadas no líquido da fatura
- # - Negócio direto                  P - Carteira Própria  S - Produto fora do perfil de risco
-
- 8 - Liquidação Institucional.       H - Home Broker
- D - Day-Trade                       X - Box
-
- F - Cobertura                       Y - Desmanche de Box                                    ________________________________________________
- B - Debêntures                      L - Precatório
-                                                                                           GENIAL INVESTIMENTOS CORRETORA DE VALORES MOBILIÁRIOS S.A.
+F - Cobertura                                              Y - Desmanche de Box                                                              ________________________________________________
+B - Debêntures                                             L - Precatório                                                                   GENIAL INVESTIMENTOS CORRETORA DE VALORES MOBILIÁRIOS S.A.
+

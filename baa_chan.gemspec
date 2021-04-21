@@ -17,9 +17,8 @@ Gem::Specification.new do |s|
   s.license     = 'MIT'
   s.required_ruby_version = '>= 3.0.0'
 
-  s.add_development_dependency 'pry', '~> 0.14.1'
+  s.add_development_dependency 'pry-byebug', '~> 3.9.0'
   s.add_development_dependency 'rspec', '~> 3.10.0'
 
   s.add_dependency 'jbuilder', '~> 2.11.2'
-  s.add_dependency 'pdf-reader', '~> 2.4.2'
 end

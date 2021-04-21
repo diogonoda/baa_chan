@@ -1,5 +1,5 @@
 broker:
-  line: 5
+  line: 4
 trade_confirmation_number:
   line: 2
   index: 0
@@ -17,20 +17,20 @@ quantity:
 price:
   index: 7
 clearing_fee:
-  line: 72
+  regexp: .*Taxa de liquidação.*
   index: 7
 registration_fee:
-  line: 73
+  regexp: .*Taxa de Registro.*
   index: 7
 emoluments:
-  line: 81
+  regexp: .*Emolumentos.*
   index: 1
 brokerage:
-  line: 87
-  index: 1
+  regexp: ^A coluna Q.*
+  index: 9
 iss:
-  line: 91
+  regexp: ^ISS \( SÃO PAULO \).*
   index: 5
 pis_cofins:
-  line: 94
+  regexp: ^ISS/PIS/COFINS.*
   index: 1
