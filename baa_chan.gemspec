@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name        = 'baa_chan'
-  s.version     = '0.0.0'
+  s.version     = '0.0.1'
   s.executables << 'baa_chan'
   s.summary     = 'Trade Confirmation Reader'
   s.description = <<~DESC

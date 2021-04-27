@@ -2,4 +2,4 @@
 # frozen_string_literal: true
 
 require 'baa_chan'
-puts BaaChan::Reader.new(ARGV[0]).call.first.to_builder
+puts BaaChan::Reader.new(ARGV[0]).call.to_builder

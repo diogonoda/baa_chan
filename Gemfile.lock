@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    baa_chan (0.0.0)
+    baa_chan (0.0.1)
       jbuilder (~> 2.11.2)
 
 GEM

@@ -90,48 +90,45 @@ module BaaChan
 
     private
 
-    def brokerage
-      brokerage_line = @lines.find { |line| line.match? @layout.brokerage_regexp }
+    def value_for(attr_name)
+      @lines.find { |line| line.match? @layout.regexp_for(attr_name) }
+            .split[@layout.index(attr_name)]
+            .gsub(',', '.')
+            .to_f
+    end
 
-      brokerage_line.split[@layout.index].gsub(',', '.').to_f
+    def brokerage
+      value_for('brokerage')
+    rescue NoMethodError
+      0.0
     end
 
     def clearing_fee
-      clearing_fee_line = @lines.find { |line| line.match? @layout.clearing_fee_regexp }
-
-      clearing_fee_line.split[@layout.index].gsub(',', '.').to_f
+      value_for('clearing_fee')
     end
 
     def registration_fee
-      registration_fee_line = @lines.find { |line| line.match? @layout.registration_fee_regexp }
-
-      registration_fee_line.split[@layout.index].gsub(',', '.').to_f
+      value_for('registration_fee')
     end
 
     def emoluments
-      emoluments_line = @lines.find { |line| line.match? @layout.emoluments_regexp }
-
-      emoluments_line.split[@layout.index].gsub(',', '.').to_f
+      value_for('emoluments')
     end
 
     def iss
-      iss_line = @lines.find { |line| line.match? @layout.iss_regexp }
-
-      iss_line.split[@layout.index].gsub(',', '.').to_f
+      value_for('iss')
+    rescue NoMethodError
+      0.0
     end
 
     def irrf
-      irrf_line = @lines.find { |line| line.match? @layout.irrf_regexp }
-
-      irrf_line.split[@layout.index].gsub(',', '.').to_f
+      value_for('irrf')
     rescue NoMethodError
       0.0
     end
 
     def pis_cofins
-      pis_cofins_line = @lines.find { |line| line.match? @layout.pis_cofins_regexp }
-
-      pis_cofins_line.split[@layout.index].gsub(',', '.').to_f
+      value_for('pis_cofins')
     rescue NoMethodError
       0.0
     end

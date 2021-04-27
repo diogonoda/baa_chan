@@ -57,10 +57,15 @@ or some related tool to have a prettier and readable output
 baa_chan <your_trade_confirmation_path> | jq
 ~~~
 
+# Disclaimers
+
+* Due to specific taxes applied, this gem will work only for trade confirmations from brazilian BOVESPA
+* Brokers can change the layout anytime, do never fully trust in the output
+* Even though the translations are not 100% assertive, the purpose of this gem is to help myself and works good enough for me. Any help to improve it will be appreciated
+
 # TODO
 
-* Include more brokerages layouts (Clear, Easynvest, XP, ...)
-* Improve rspec coverage
+* Include more brokerages layouts (Easynvest, XP, ...)
 * Code Climate and coverage badges
 * Allow users to overwrite layouts
 * Trade Confirmations with multiple pages

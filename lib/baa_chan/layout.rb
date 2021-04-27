@@ -15,39 +15,17 @@ class Layout
     attributes[caller_locations.first.label]['line'].to_i
   end
 
-  def index
-    attributes[caller_locations.first.label]['index'].to_i
+  def index(attr_name = nil)
+    attr = attr_name || caller_locations.first.label
+
+    attributes[attr]['index'].to_i
   end
 
   def trade_prefix
     attributes['trades']['prefix']
   end
 
-  def brokerage_regexp
-    attributes['brokerage']['regexp']
-  end
-
-  def clearing_fee_regexp
-    attributes['clearing_fee']['regexp']
-  end
-
-  def emoluments_regexp
-    attributes['emoluments']['regexp']
-  end
-
-  def registration_fee_regexp
-    attributes['registration_fee']['regexp']
-  end
-
-  def iss_regexp
-    attributes['iss']['regexp']
-  end
-
-  def irrf_regexp
-    attributes['irrf']['regexp']
-  end
-
-  def pis_cofins_regexp
-    attributes['pis_cofins']['regexp']
+  def regexp_for(attr)
+    attributes[attr]['regexp']
   end
 end
