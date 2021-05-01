@@ -52,6 +52,8 @@ module BaaChan
       @lines.each_with_object([]) do |line, trades|
         next unless line.include? @layout.trade_prefix
 
+        @asset = line.include?('OPCAO') ? 'option' : 'stock'
+
         @trade_line = line
         trades << Trade.new(operation, ticker, quantity, price)
       end
@@ -60,19 +62,19 @@ module BaaChan
     private
 
     def operation
-      @trade_line.split[@layout.index] == 'V' ? 'Sell' : 'Buy'
+      @trade_line.split[@layout.trade_index(@asset)] == 'V' ? 'Sell' : 'Buy'
     end
 
     def ticker
-      @trade_line.split[@layout.index]
+      @trade_line.split(/\s{2,}/)[@layout.trade_index(@asset)]
     end
 
     def quantity
-      @trade_line.split[@layout.index].to_i
+      @trade_line.scan(Regexp.new(@layout.trade_regexp(@asset)))[0].strip.gsub('.', '').to_i
     end
 
     def price
-      @trade_line.split[@layout.index].gsub(',', '.').to_f
+      @trade_line.scan(Regexp.new(@layout.trade_regexp(@asset)))[0].gsub(',', '.').to_f
     end
   end
 

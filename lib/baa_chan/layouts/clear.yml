@@ -6,16 +6,28 @@ trade_confirmation_number:
 trade_date:
   line: 2
   index: 2
+
 trades:
   prefix: 1-BOVESPA
-operation:
-  index: 1
-ticker:
-  index: 3
-quantity:
-  index: 7
-price:
-  index: 8
+
+  default: &default
+    operation:
+      index: 1
+    ticker:
+      index: 2
+    quantity:
+      regexp: \s\d{1,3}(?:\.\d+{3})*\s
+    price:
+      regexp: \s{2,}\d{1,3}(?:\.\d{3})*,\d{2,}\s{2,}
+
+  stock:
+    <<: *default
+
+  option:
+    <<: *default
+    ticker:
+      index: 4
+
 clearing_fee:
   regexp: .*Taxa de liquidação.*
   index: 7

@@ -64,7 +64,7 @@ RSpec.describe BaaChan::Reader do
         expect(first_trade.operation).to eq 'Buy'
         expect(first_trade.price).to eq 13.30
         expect(first_trade.quantity).to eq 200
-        expect(first_trade.ticker).to eq 'PETROBRAS'
+        expect(first_trade.ticker).to eq 'PETROBRAS PN'
       end
 
       it 'contains details of costs' do

@@ -1,3 +1,6 @@
+[![Maintainability](https://api.codeclimate.com/v1/badges/096fac537467127e4984/maintainability)](https://codeclimate.com/github/diogonoda/baa_chan/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/096fac537467127e4984/test_coverage)](https://codeclimate.com/github/diogonoda/baa_chan/test_coverage)
+
 # Baa_chan
 
 BaaChan is kind and knows you have a lot to do. She's here to help you out

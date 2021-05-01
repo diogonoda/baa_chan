@@ -9,12 +9,12 @@ RSpec.describe BaaChan::Parser do
     context 'when there are two trades' do
       context 'when parsing trade data' do
         let(:first_trade_line) do
-          'BM&FBOVESPA S/A.      V   OPCAO DE       02/20      PETRB337               PN 32,95\
-     100       0,100000                    8,00   C'
+          'BM&FBOVESPA S/A.      V   OPCAO DE       02/20      PETRB337               PN 32,95'\
+          '          100       0,100000                    8,00   C'
         end
         let(:second_trade_line) do
-          'BM&FBOVESPA S/A.      V   OPCAO DE       02/20      VALEB635               ON 62,30\
-      200       0,290000                   58,00   C'
+          'BM&FBOVESPA S/A.      V   OPCAO DE       02/20      VALEB635               ON 62,30'\
+          '          200       0,290000                   58,00   C'
         end
 
         before do
@@ -91,6 +91,82 @@ RSpec.describe BaaChan::Parser do
 
       it 'return an CostsParserError' do
         expect { @costs_parser.parse }.to raise_error(BaaChan::CostsParserError)
+      end
+    end
+  end
+
+  context 'when parsing genial trades confirmation' do
+    let(:dummy_line) { 'GENIAL INVESTIMENTOS CORRETORA DE VALORES MOBILIÁRIOS S.A.' }
+    let(:lines) { [dummy_line] }
+    let(:layout) { Layout.new('genial') }
+
+    context 'when parsing trades data' do
+      let(:fii_trade_line) do
+        '1-BOVESPA               C    VISTA                                                FII HSI MALL CI ER'\
+        '                   10                     88,45                     884,50                         D'
+      end
+      let(:stock_trade_line) do
+        '1-BOVESPA               C    VISTA                                                PETROBRAS PN             N2'\
+        '                             200                    13,30                    2.660,00                       D'
+      end
+      let(:option_trade_line) do
+        '1-BOVESPA               V    OPCAO DE COMPRA                            05/20     PETRE192 PN 19,22 PETR'\
+        '                        1.700                  0,25                     425,00                         C'
+      end
+
+      before do
+        lines.push(fii_trade_line, stock_trade_line, option_trade_line)
+
+        @trades = BaaChan::TradeParser.new(lines, layout).parse
+      end
+
+      it 'returns trades details' do
+        expect(@trades.size).to eq 3
+
+        fii_trade = @trades.first
+
+        expect(fii_trade.operation).to eq 'Buy'
+        expect(fii_trade.price).to eq 88.45
+        expect(fii_trade.quantity).to eq 10
+        expect(fii_trade.ticker).to eq 'FII HSI MALL CI ER'
+
+        stock_trade = @trades[1]
+
+        expect(stock_trade.price).to eq 13.3
+
+        option_trade = @trades[2]
+
+        expect(option_trade.ticker).to eq 'PETRE192 PN 19,22 PETR'
+      end
+    end
+  end
+
+  context 'when parsing clear trades confirmation' do
+    let(:dummy_line) { 'CLEAR CORRETORA - GRUPO XP' }
+    let(:lines) { [dummy_line] }
+    let(:layout) { Layout.new('clear') }
+
+    context 'when parsing trades data' do
+      let(:stock_trade_line) do
+        '1-BOVESPA                    C VISTA                                          ITAUUNIBANCO'\
+        '     ON ED N1              100                30,76                             3.076,00 D'
+      end
+
+      before do
+        lines.push(stock_trade_line)
+
+        @trades = BaaChan::TradeParser.new(lines, layout).parse
+      end
+
+      it 'returns trades details' do
+        expect(@trades.size).to eq 1
+
+        stock_trade = @trades.first
+
+        expect(stock_trade.operation).to eq 'Buy'
+        expect(stock_trade.price).to eq 30.76
+        expect(stock_trade.quantity).to eq 100
+        expect(stock_trade.ticker).to eq 'ITAUUNIBANCO'
       end
     end
   end
