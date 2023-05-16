@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
     'source_code_uri' => 'https://github.com/diogonoda/baa_chan'
   }
 
-  s.add_development_dependency 'pry-byebug', '~> 3.9.0'
+  s.add_development_dependency 'pry-byebug', '~> 3.10.1'
   s.add_development_dependency 'rspec', '~> 3.10.0'
   s.add_development_dependency 'simplecov', '~> 0.16.1'
   s.add_development_dependency 'coveralls', '~> 0.8.23'
